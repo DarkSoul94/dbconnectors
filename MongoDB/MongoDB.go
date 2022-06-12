@@ -8,7 +8,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-func MongoDbInit(ctx context.Context, host, port, dbName string) (*mongo.Database, error) {
+func InitMongoDb(ctx context.Context, host, port, dbName string) (*mongo.Database, error) {
 	clientOptions := options.Client().ApplyURI(
 		fmt.Sprintf(
 			"mongodb://%s:%s/",
